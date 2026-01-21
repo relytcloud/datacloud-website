@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import memorylakeLogo from "@/public/memorylake.svg";
+import powerdrillLogo from "@/public/powerdrill.svg";
+import relytLogo from "@/public/relyt.svg";
 
 export default function Navigation() {
   const [isVisible, setIsVisible] = useState(true);
@@ -24,9 +27,9 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { label: "Powerdrill", href: "#powerdrill" },
-    { label: "Memory Lake", href: "#memory-lake" },
-    { label: "Relyt", href: "#relyt" },
+    { label: "Powerdrill", href: "#powerdrill", logo: powerdrillLogo.src },
+    { label: "MemoryLake", href: "#memory-lake", logo: memorylakeLogo.src },
+    { label: "Relyt", href: "#relyt", logo: relytLogo.src },
   ];
 
   return (
@@ -35,7 +38,9 @@ export default function Navigation() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <nav className={`container mx-auto px-4 sm:px-6 lg:px-8 ${isMobileMenuOpen ? "bg-black" : "bg-transparent"}`}>
+      <nav
+        className={`container mx-auto px-4 sm:px-6 lg:px-8 ${isMobileMenuOpen ? "bg-black" : "bg-transparent"}`}
+      >
         <div className="flex h-16 items-center justify-between lg:h-20">
           <div className="shrink-0">
             <a href="/">
@@ -52,10 +57,16 @@ export default function Navigation() {
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navItems.map((item) => (
               <a
-                className="text-sm text-white/90 transition-colors duration-200 hover:text-white lg:text-base"
+                className="inline-flex items-center gap-1 text-sm text-white/90 transition-colors duration-200 hover:text-white lg:text-base"
                 href={item.href}
                 key={item.label}
               >
+                <Image
+                  alt={item.label}
+                  height={24}
+                  src={item.logo}
+                  width={24}
+                />
                 {item.label}
               </a>
             ))}

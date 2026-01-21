@@ -1,23 +1,29 @@
 "use client";
 
+import Image from "next/image";
+
 interface SectionProps {
   id?: string;
   title: string;
+  subtitle: string;
   description: string;
   buttonText?: string;
   buttonHref?: string;
   videoName: string;
   className?: string;
+  logo?: string;
 }
 
 export default function Section({
   id,
   title,
+  subtitle,
   description,
   buttonText,
   buttonHref,
   videoName,
   className,
+  logo,
 }: SectionProps) {
   return (
     <section
@@ -37,20 +43,49 @@ export default function Section({
         </video>
         <div className="absolute inset-0 bg-black/40" />
       </div>
-      <div className="section-content absolute z-10 mx-auto max-w-4xl px-4">
-        <h2 className="mb-4 font-semibold text-4xl text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          {title}
-        </h2>
-        <p className="mx-auto mb-8 max-w-2xl text-lg text-white/90 sm:text-xl md:text-2xl">
+      <div className="section-content absolute z-10 mx-auto max-w-2xl px-4">
+        <div className="mb-1.5 flex items-center gap-2">
+          {logo && (
+            <Image
+              alt={title}
+              className="h-14 w-auto"
+              height={48}
+              src={logo}
+              width={48}
+            />
+          )}
+          <h2 className="font-semibold text-3xl text-white md:text-4xl lg:text-5xl">
+            {title}
+          </h2>
+        </div>
+        <p className="mx-auto mb-2.5 max-w-2xl text-sm text-white/80 md:mb-7 md:text-base lg:text-lg">
+          <span className="font-semibold text-white">{subtitle}</span>{" "}
           {description}
         </p>
         {buttonText && buttonHref && (
           <a
-            className="inline-block rounded-md border-2 border-white bg-transparent px-6 py-2 font-semibold text-base text-white transition-all duration-200 hover:bg-white hover:text-black sm:text-lg"
+            className="group inline-flex h-[50px] items-center justify-center rounded-sm border border-white/35 px-5 text-white text-xs uppercase tracking-widest transition hover:bg-white hover:text-black"
             href={buttonHref}
             target="_blank"
           >
             {buttonText}
+            {/* arrow right icon */}
+            <svg
+              aria-hidden="true"
+              className="ml-1 text-sm transition-transform duration-300 group-hover:translate-x-2"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
           </a>
         )}
       </div>

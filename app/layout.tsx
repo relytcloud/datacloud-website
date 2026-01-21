@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Barlow } from "next/font/google";
 import "./globals.css";
-
 
 // const orbitron = Orbitron({
 //   variable: "--font-orbitron",
@@ -14,10 +13,11 @@ import "./globals.css";
 //   weight: ["400", "500", "600", "700"],
 // });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const barlow = Barlow({
+  variable: "--font-barlow",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -82,9 +82,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body
-        className={`${spaceGrotesk.variable} antialiased`}
-      >
+      <body className={`${barlow.variable} relative min-h-screen antialiased`}>
         {children}
       </body>
     </html>

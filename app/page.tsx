@@ -1,5 +1,8 @@
 "use client";
 
+import memorylakeLogo from "@/public/memorylake.svg";
+import powerdrillLogo from "@/public/powerdrill.svg";
+import relytLogo from "@/public/relyt.svg";
 import Footer from "./_components/footer";
 import Navigation from "./_components/navigation";
 import Section from "./_components/section";
@@ -8,41 +11,53 @@ export default function Home() {
   const sections = [
     {
       id: "hero",
-      className: "[&>.section-content]:text-center",
-      title: "Memory-Centric DataCloud",
+      className:
+        "[&>.section-content]:text-center [&_.section-content_h2]:w-[70%] [&_.section-content_h2]:mx-auto",
+      title: "MEMORY-CENTRIC DATA CLOUD",
+      subtitle: "The Complete AI Data Stack — From Memory to Insights.",
       description:
-        "Building the future of space exploration and advancing human presence beyond Earth",
+        "Enterprise-proven memory platform delivering integrated memory management, data LLM, and AI analytics. The complete infrastructure for intelligent AI systems",
       videoName: "main",
+      logo: "",
     },
     {
       id: "powerdrill",
-      className: "[&>.section-content]:top-[20%] [&>.section-content]:left-[10%]",
-      title: "Powerdrill",
+      className:
+        "[&>.section-content]:top-[20%] [&>.section-content]:left-[10%]",
+      title: "POWERDRILL",
+      subtitle: "From Data to Decisions in Minutes, Not Days or Hours. ",
       description:
-        "Pushing the boundaries of space exploration with innovative missions and groundbreaking achievements",
+        "AI-powered data analysis platform that transforms raw data into actionable insights 100x faster. No coding required—just upload, ask, and explore with intelligent AI agents.",
       buttonText: "View",
       buttonHref: "https://powerdrill.ai/",
       videoName: "pd",
+      logo: powerdrillLogo.src,
     },
     {
       id: "memory-lake",
-      className: "[&>.section-content]:top-[20%] [&>.section-content]:right-[10%]",
-      title: "Memory Lake",
+      className:
+        "[&>.section-content]:top-[20%] [&>.section-content]:right-[10%]",
+      title: "MEMORYLAKE",
+      subtitle: "Every AI Agent Needs a Memory — We Built It. ",
       description:
-        "Revolutionary spacecraft and propulsion systems designed for interplanetary travel and deep space exploration",
+        "The memory layer enabling AI agents to think and act like humans. Transforms any data into 98% accurate, PB-scale knowledge for all LLM systems.",
       buttonText: "View",
       buttonHref: "https://memorylake.ai/",
       videoName: "memorylake",
+      logo: memorylakeLogo.src,
     },
     {
       id: "relyt",
-      className: "[&>.section-content]:top-[20%] [&>.section-content]:left-[10%]",
-      title: "Relyt",
+      className:
+        "[&>.section-content]:top-[20%] [&>.section-content]:left-[10%]",
+      title: "RELYT",
+      subtitle: "One Data Cloud, Every Data Model — AI-Ready. ",
       description:
-        "Dedicated to making life multiplanetary through the development of advanced space technologies",
+        "Multi-model serverless data cloud with extreme performance. 100% PostgreSQL compatible, handles structured tables, vectors, graphs, and JSON at PB-scale effortlessly.",
       buttonText: "View",
-      buttonHref: "https://https://data.cloud/relytone",
+      buttonHref: "https://data.cloud/relytone",
       videoName: "relyt",
+      logo: relytLogo.src,
     },
   ];
 

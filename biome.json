@@ -17,6 +17,8 @@
   },
   "formatter": {
     "enabled": true,
+    "formatWithErrors": false,
+    "attributePosition": "auto",
     "indentStyle": "space",
     "indentWidth": 2
   },
@@ -26,6 +28,18 @@
       "recommended": true,
       "suspicious": {
         "noUnknownAtRules": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      },
+      "style": {
+        "noDescendingSpecificity": "off"
+      },
+      "performance": {
+        "useTopLevelRegex": "off"
       }
     },
     "domains": {

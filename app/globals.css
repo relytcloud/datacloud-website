@@ -1,5 +1,124 @@
 @import "tailwindcss";
 
+
+@theme inline {
+  --color-icon: #1c1e22;
+  --color-grey-900: #0c0d0f;
+  --color-grey-800: #272a2f;
+  --color-grey-700: #41464d;
+  --color-grey-600: #545960;
+  --color-grey-500: #7a7f87;
+  --color-grey-400: #9ea2a8;
+  --color-grey-200: #d9dce0;
+  --color-grey-100: #edeff2;
+  --color-contrast-secondary: #ffffffb2;
+  --color-contrast-hover: #ffffff29;
+  --color-text-tertiary: #7e868c;
+  --color-primary-blue: #51a4f6;
+  --color-form-error: #D93458;
+  --color-gradient-card-outlineBorder: #707070;
+}
+
+/* Custom Typography Utilities */
+@utility text-xs-400 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+
+@utility text-xs-500 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 0em;
+}
+
+@utility text-sm-400 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+@utility text-sm-500 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+@utility text-base-400 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+@utility text-base-500 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+@utility text-2xl-400 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+@utility text-2xl-500 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+@utility text-2xl-700 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+@utility text-3xl-500 {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 500;
+}
+
+@utility text-3xl-700 {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 700;
+}
+
+@utility text-4xl-700 {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+
+@utility text-5xl-700 {
+  font-size: 3rem;
+  line-height: 3.25rem;
+  font-weight: 700;
+}
+
+@utility text-6xl-700 {
+  font-size: 4rem;
+  line-height: 4.25rem;
+  font-weight: 700;
+}
+
+@utility text-number {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 600;
+  font-family: Inter, sans-serif;
+}
+
+@utility text-helper {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  font-weight: 400;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -54,5 +173,153 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.benefit-liner-gradient {
+  background: linear-gradient(90deg, #51a4f6 0%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline-bar {
+  background: linear-gradient(
+    180deg,
+    rgba(153, 153, 153, 0) 0%,
+    #fff 5%,
+    #fff 95%,
+    rgba(153, 153, 153, 0) 100%
+  );
+
+  @media (min-width: 1024px) {
+    background: linear-gradient(
+      270deg,
+      rgba(153, 153, 153, 0) 0%,
+      #fff 5%,
+      #fff 95%,
+      rgba(153, 153, 153, 0) 100%
+    );
+  }
+}
+
+.timeline-dot-shadow {
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.5),
+     0px 0px 24px 0px #fff;
+}
+
+.timeline-title {
+  background: linear-gradient(180deg, #fff 0%, #999 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loaction-img-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
+.loaction-img-mask-vertical {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    #000000 80%,
+    #000000 100%
+  );
+}
+
+.loaction-img-mask-horizon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 0%,
+    #000000 20%,
+    transparent 100%
+  );
+}
+
+.legal-table {
+  border-collapse: separate; /* 使用 separate 而不是 collapse */
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--color-grey-700);
+}
+.legal-table th {
+  font-weight: 500;
+}
+.legal-table thead {
+  color: #fff;
+  background-color: #14161a;
+}
+
+.legal-table td {
+  border-top: 1px solid var(--color-grey-700);
+  color: var(--color-grey-400);
+}
+
+.legal-table th:not(:first-child), td:not(:first-child) {
+  border-left: 1px solid var(--color-grey-700);
+}
+
+.display-number {
+  ol {
+    list-style-type: none;
+  }
+
+  ol > li {
+    counter-increment: firstLevelItem 1;
+  }
+
+  li:before {
+    content: counter(firstLevelItem) ". ";
+    margin-right: 8px;
+  }
+
+  li ol {
+    padding-left: 50px;
+  }
+
+  li ol > li {
+    counter-increment: secondLevelItem 1;
+  }
+
+  li ol > li:before {
+    content: counter(firstLevelItem) "." counter(secondLevelItem);
+    margin-right: 8px;
+    margin-left: -50px;
+    width: 42px;
+    display: inline-block;
+  }
+
+  ul {
+    list-style-type: none;
+    list-style-position: outside;
+    padding-left: 24px;
+  }
+
+  ul > li:before {
+    content: "•";
+    margin-left: -24px;
+    width: 24px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 0;
   }
 }

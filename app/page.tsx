@@ -3,8 +3,6 @@
 import memorylakeLogo from "@/public/memorylake.svg";
 import powerdrillLogo from "@/public/powerdrill.svg";
 import relytLogo from "@/public/relyt.svg";
-import Footer from "./_components/footer";
-import Navigation from "./_components/navigation";
 import Section from "./_components/section";
 
 export default function Home() {
@@ -62,14 +60,10 @@ export default function Home() {
   ];
 
   return (
-    <>
-      <Navigation />
-      <main>
-        {sections.map((section) => (
-          <Section key={section.id} {...section} />
-        ))}
-      </main>
-      <Footer />
-    </>
+    <main>
+      {sections.map((section) => (
+        <Section key={section.id} {...section} />
+      ))}
+    </main>
   );
 }

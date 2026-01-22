@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 import "./globals.css";
+import dynamic from "next/dynamic";
+
+const Header = dynamic(() => import("@/components/header"));
+const Footer = dynamic(() => import("@/components/footer"));
 
 // const orbitron = Orbitron({
 //   variable: "--font-orbitron",
@@ -21,57 +25,37 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "DATACLOUD - Making Humanity Multiplanetary",
-    template: "%s | DATACLOUD",
-  },
+  title: "DataCloud: The Serverless AI-ready Data Cloud",
   description:
-    "Building the future of space exploration and advancing human presence beyond Earth. Explore our missions, technology, and latest news.",
+    "Serverless for Data Warehousing, Data Lakes & AI: A secure, open data cloud that's built for scale, accuracy, and native reliability, offering 10x TCO savings.",
   keywords: [
-    "space exploration",
-    "space missions",
-    "rocket technology",
-    "spacecraft",
-    "interplanetary travel",
+    "Serverless",
+    "Data Platform",
+    "Data Intelligence",
+    "Data Warehouse",
+    "OLAP",
+    "Vector Database",
+    "Lakehouse",
+    "Intelligent Lakehouse",
+    "Data Analysis",
+    "Unstructured Data",
+    "Generative AI",
   ],
-  authors: [{ name: "DATACLOUD" }],
-  creator: "DATACLOUD",
-  publisher: "DATACLOUD",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL("https://data.cloud"),
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://data.cloud",
-    title: "DATACLOUD - Making Humanity Multiplanetary",
-    description:
-      "Building the future of space exploration and advancing human presence beyond Earth.",
-    siteName: "DATACLOUD",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "DATACLOUD - Making Humanity Multiplanetary",
-    description:
-      "Building the future of space exploration and advancing human presence beyond Earth.",
-    creator: "@datacloud",
-  },
   robots: {
     index: true,
     follow: true,
+    nocache: true,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 
@@ -83,7 +67,9 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <body className={`${barlow.variable} relative min-h-screen antialiased`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

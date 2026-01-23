@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export", // Enable static export for CDN distribution
   reactCompiler: true,
+  trailingSlash: true,
   images: {
     unoptimized: true, // Required for static export
     remotePatterns: [

@@ -137,19 +137,19 @@ export default function Header({ className = "" }: Props) {
             hrefs={[
               {
                 text: "Social Media",
-                href: "/use-case/social-media",
+                href: "/use-case/social-media/",
               },
               {
                 text: "Generative AI",
-                href: "/use-case/generative-ai",
+                href: "/use-case/generative-ai/",
               },
               {
                 text: "Smart Manufacturing",
-                href: "/use-case/smart-manufacturing",
+                href: "/use-case/smart-manufacturing/",
               },
               {
                 text: "Internet",
-                href: "/use-case/internet",
+                href: "/use-case/internet/",
               },
             ]}
             text="Use Cases"
@@ -158,7 +158,7 @@ export default function Header({ className = "" }: Props) {
             hrefs={[
               {
                 text: "Hello",
-                href: "/customer-story/hello",
+                href: "/customer-story/hello/",
               },
             ]}
             text="Customer Stories"
@@ -172,13 +172,13 @@ export default function Header({ className = "" }: Props) {
               },
               {
                 text: "Documentation",
-                href: "/documentation",
+                href: "/documentation/",
               },
             ]}
             text="Resources"
           />
           <MenuFmt
-            hrefs={[{ text: "About Us", href: "/about-us" }]}
+            hrefs={[{ text: "About Us", href: "/about-us/" }]}
             text="Company"
           />
         </nav>
@@ -201,7 +201,7 @@ export default function Header({ className = "" }: Props) {
             size="sm"
             variant="gradient"
           >
-            <Link className="hidden text-center lg:block" href={"/contact-us"}>
+            <Link className="hidden text-center lg:block" href={"/contact-us/"}>
               Contact Us
             </Link>
           </Button>
@@ -222,7 +222,7 @@ export default function Header({ className = "" }: Props) {
                 >
                   <Link
                     className="w-full text-left"
-                    href={"/use-case/social-media"}
+                    href={"/use-case/social-media/"}
                     onClick={() => {
                       setShowMenu(false);
                     }}
@@ -237,7 +237,7 @@ export default function Header({ className = "" }: Props) {
                 >
                   <Link
                     className="w-full text-left"
-                    href={"/use-case/generative-ai"}
+                    href={"/use-case/generative-ai/"}
                     onClick={() => {
                       setShowMenu(false);
                     }}
@@ -252,7 +252,7 @@ export default function Header({ className = "" }: Props) {
                 >
                   <Link
                     className="w-full text-left"
-                    href={"/use-case/smart-manufacturing"}
+                    href={"/use-case/smart-manufacturing/"}
                     onClick={() => {
                       setShowMenu(false);
                     }}
@@ -267,7 +267,7 @@ export default function Header({ className = "" }: Props) {
                 >
                   <Link
                     className="w-full text-left"
-                    href={"/use-case/internet"}
+                    href={"/use-case/internet/"}
                     onClick={() => {
                       setShowMenu(false);
                     }}
@@ -289,7 +289,7 @@ export default function Header({ className = "" }: Props) {
                 >
                   <Link
                     className="w-full text-left"
-                    href={"/customer-story/hello"}
+                    href={"/customer-story/hello/"}
                     onClick={() => {
                       setShowMenu(false);
                     }}
@@ -329,7 +329,7 @@ export default function Header({ className = "" }: Props) {
                 >
                   <Link
                     className="w-full text-left"
-                    href={"/documentation"}
+                    href={"/documentation/"}
                     onClick={() => {
                       setShowMenu(false);
                     }}
@@ -352,7 +352,7 @@ export default function Header({ className = "" }: Props) {
                   size={"sm"}
                   variant="ghost"
                 >
-                  <Link className="w-full text-left" href={"/about-us"}>
+                  <Link className="w-full text-left" href={"/about-us/"}>
                     About Us
                   </Link>
                 </Button>
@@ -361,20 +361,9 @@ export default function Header({ className = "" }: Props) {
           </nav>
           <nav>
             <Button
-              className="w-full text-white"
-              onClick={() => {
-                location.assign("/request-demo");
-                setShowMenu(false);
-              }}
-              size="sm"
-              variant="gradient"
-            >
-              Request Demo
-            </Button>
-            <Button
               className="mt-2 w-full text-white"
               onClick={() => {
-                location.assign("/contact-us");
+                location.assign("/contact-us/");
                 setShowMenu(false);
               }}
               size="sm"

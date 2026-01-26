@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import type React from "react";
 import SessionContainer from "@/components/session-container";
 
@@ -10,8 +13,10 @@ export default function Solution({
   solution: React.ReactNode;
   children: React.ReactNode;
 }) {
+  const t = useTranslations("shared.solution");
+
   return (
-    <SessionContainer title="Solution Overview" titleClassName={titleClassName}>
+    <SessionContainer title={t("title")} titleClassName={titleClassName}>
       {typeof solution === "string" ? (
         <p className="mx-auto max-w-[800px] text-center text-base-400 text-grey-400">
           {solution}

@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 import SessionContainer from "@/components/session-container";
 
@@ -8,8 +11,10 @@ export interface IPoint {
 }
 
 export default function PainPoints({ pointList }: { pointList: IPoint[] }) {
+  const t = useTranslations("shared.painPoints");
+
   return (
-    <SessionContainer title="Customer Pain Points" titleClassName="md:!text-left">
+    <SessionContainer title={t("title")} titleClassName="md:!text-left">
       <div className="grid grid-flow-row grid-cols-1 gap-10 md:grid-cols-2">
         {pointList.map(({ icon, title, des }) => (
           <div className="flex flex-col gap-3" key={title}>

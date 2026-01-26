@@ -17,7 +17,6 @@ export const usePopoverHover = () => {
         clearTimeout(timer);
       };
     }
-    console.log(popover.dataset.headlessuiState);
     const enterButton = () => {
       clearTimeout(timer);
       if (popover.dataset.headlessuiState === "open") {

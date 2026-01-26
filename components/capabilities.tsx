@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import type { ReactElement } from "react";
 import SessionContainer from "@/components/session-container";
 import { SearchOutlined } from "@/components/ui/icons/search-outlined";
@@ -11,8 +14,10 @@ export default function Capabilities({
     desc?: string;
   }[];
 }) {
+  const t = useTranslations("shared.capabilities");
+
   return (
-    <SessionContainer title="Application Scenarios">
+    <SessionContainer title={t("title")}>
       <div className="flex w-full flex-col justify-center gap-6 md:flex-row">
         {content?.map((item) => (
           <div

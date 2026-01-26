@@ -1,0 +1,860 @@
+{
+  "navigation": {
+    "products": "Products",
+    "useCases": "Use Cases",
+    "customerStories": "Customer Stories",
+    "resources": "Resources",
+    "company": "Company",
+    "contactUs": "Contact Us",
+    "productItems": {
+      "powerdrill": "Powerdrill",
+      "memorylake": "MemoryLake",
+      "relyt": "Relyt"
+    },
+    "useCaseItems": {
+      "socialMedia": "Social Media",
+      "generativeAI": "Generative AI",
+      "smartManufacturing": "Smart Manufacturing",
+      "internet": "Internet"
+    },
+    "customerStoryItems": {
+      "hello": "Hello"
+    },
+    "resourceItems": {
+      "blog": "Blog",
+      "documentation": "Documentation"
+    },
+    "companyItems": {
+      "aboutUs": "About Us"
+    }
+  },
+  "footer": {
+    "privacyNotice": "Privacy Notice",
+    "termsOfService": "Terms of Service",
+    "sla": "SLA",
+    "copyright": "© {year} DATACLOUD."
+  },
+  "home": {
+    "hero": {
+      "title": "MEMORY-CENTRIC DATA CLOUD",
+      "subtitle": "The Complete AI Data Stack — From Memory to Insights.",
+      "description": "Enterprise-proven memory platform delivering integrated memory management, data LLM, and AI analytics. The complete infrastructure for intelligent AI systems."
+    },
+    "powerdrill": {
+      "title": "POWERDRILL",
+      "subtitle": "From Data to Decisions in Minutes, Not Days or Hours.",
+      "description": "AI-powered data analysis platform that transforms raw data into actionable insights 100x faster. No coding required—just upload, ask, and explore with intelligent AI agents.",
+      "buttonText": "View"
+    },
+    "memorylake": {
+      "title": "MEMORYLAKE",
+      "subtitle": "Every AI Agent Needs a Memory — We Built It.",
+      "description": "The memory layer enabling AI agents to think and act like humans. Transforms any data into 98% accurate, PB-scale knowledge for all LLM systems.",
+      "buttonText": "View"
+    },
+    "relyt": {
+      "title": "RELYT",
+      "subtitle": "One Data Cloud, Every Data Model — AI-Ready.",
+      "description": "Multi-model serverless data cloud with extreme performance. 100% PostgreSQL compatible, handles structured tables, vectors, graphs, and JSON at PB-scale effortlessly.",
+      "buttonText": "View"
+    }
+  },
+  "btn": {
+    "aboutUs": "About Us",
+    "company": "Company",
+    "confirm": "Confirm",
+    "consult": "Contact Us",
+    "contactUs": "Contact Us",
+    "doc": "Documentation",
+    "download": "Download Now",
+    "getComWhitePaper": "Download Enterprise White Paper",
+    "getWhitePaper": "Get White Paper",
+    "handsOn": "Get Started",
+    "language": "Language",
+    "ok": "OK",
+    "privacyNotice": "Privacy Notice",
+    "product": "Products",
+    "relyt": "Relyt",
+    "requestDemo": "Request Demo",
+    "serviceLevelAgreement": "SLA",
+    "submit": "Submit",
+    "termsOfService": "Terms of Service",
+    "useCases": "Use Cases",
+    "whyUs": "Why Relyt"
+  },
+  "contactUs": {
+    "company": {
+      "error": "This field cannot be empty.",
+      "label": "Company *",
+      "placeholder": ""
+    },
+    "content": {
+      "error": "Please describe your use case.",
+      "label": "Your Use Case *",
+      "placeholder": ""
+    },
+    "desc": "Please complete the form, and our team will reach out within one business day.",
+    "email": {
+      "error": "Please enter a valid Email address.",
+      "label": "Email *",
+      "placeholder": ""
+    },
+    "job": {
+      "error": "This field cannot be empty.",
+      "label": "Job Title",
+      "placeholder": ""
+    },
+    "name": {
+      "error": "This field cannot be empty.",
+      "label": "Full Name"
+    },
+    "phone": {
+      "error": "This field cannot be empty.",
+      "label": "Phone Number *"
+    },
+    "reason": {
+      "error": "Select at least one option.",
+      "label": "You're Interested In *",
+      "placeholder": "",
+      "subLabel": " (Select 1 to 3 Options)"
+    },
+    "title": "Build Your Tailored AI and Data Intelligence Today",
+    "wechat": {
+      "error": "This field cannot be empty.",
+      "label": "WhatsApp Number",
+      "placeholder": ""
+    },
+    "whitePaper": "Relyt White Paper",
+    "advantages": {
+      "advantage1": "Serverless architecture with metadata, data, storage, and compute decoupled",
+      "advantage2": "One data for diverse workloads",
+      "advantage3": "High-quality analysis results, validated by leading AI data analysis platforms",
+      "advantage4": "90% cost off, benefited from operator-level performance optimization",
+      "advantage5": "Enterprise-grade security & compliance"
+    },
+    "useSceneOptions": {
+      "option1": "High accuracy AI analysis",
+      "option2": "Real-time online analysis",
+      "option3": "Batch processing",
+      "option4": "Vector storage and search",
+      "option5": "Hybrid search and analysis of structured and unstructured data",
+      "option6": "High-concurrency stability",
+      "option7": "Reduce storage costs for analytics systems",
+      "option8": "Zero-ETL",
+      "option9": "Data security",
+      "option10": "Data analytics ecosystem",
+      "option11": "Adaptive Query Scaling",
+      "option12": "Reduce Ops complexity and costs "
+    },
+    "learnFromOptions": {
+      "option1": "Search Engine",
+      "option2": "LinkedIn",
+      "option3": "X.com",
+      "option4": "Third-party Cloud Marketplace",
+      "option5": "Personal Recommendation",
+      "option6": "Media",
+      "option7": "Conferences and Events"
+    },
+    "submitButton": "Contact Us",
+    "whereDidYouLearn": "Where did you learn about us?*"
+  },
+  "form": {
+    "agree": {
+      "label": "I have read and agree to the ",
+      "link": "Privacy Notice"
+    }
+  },
+  "homepage": {
+    "desc": "Validated by AI Data Analysis Platforms with Over 1 Million Users",
+    "descTitle1": "Serverless",
+    "descTitle2": "Native Reliability",
+    "descTitle3": "10X TCO Saving",
+    "descTitle4": "100X Insight Boosting",
+    "trustTitle": "DataCloud is trusted by",
+    "endorsement": {
+      "desc": "To facilitate swift and safe adoption of generative AI, organizations must establish <strong>AI-ready</strong> principles, make data <strong>AI-ready</strong> and implement <strong>AI-ready</strong> security. For data to be AI-ready, it must meet five criteria. It is secure, enriched, fair, accurate and is governed by the lighthouse principles."
+    },
+    "subTitle": {
+      "global": "Trusted and Compliant. Your Data, Our Commitment.",
+      "keyAdvantages": "Application Scenarios",
+      "news": "Breaking News",
+      "serverless": "Serverless AI-ready Data Cloud",
+      "useCases": "Use Cases",
+      "what": "What Is AI-ready Data Cloud?"
+    },
+    "title": "AI-ready Data Cloud",
+    "useCases": {
+      "aigc": "Generative AI",
+      "intelligentManufacturing": "Smart Manufacturing",
+      "internet": "Internet",
+      "socialMedia": "Social Media"
+    }
+  },
+  "link": {
+    "doc": "https://docs.data.cloud"
+  },
+  "notFound": {
+    "back": "Go Back",
+    "desc": "Sorry, the page you are looking for doesn't exist or has been moved. Here are some helpful links:",
+    "home": "Home Page",
+    "notFound": "Page Not Found",
+    "sorry": "Oops!"
+  },
+  "product": {
+    "advantage": {
+      "list": {
+        "title1": "Serverless architecture with metadata, data, storage, and compute decoupled",
+        "title2": "High-quality analysis results, validated by leading AI data analysis platforms",
+        "title3": "90% cost off, benefited from operator-level performance optimization",
+        "title4": "One data for diverse workloads",
+        "title5": "Enterprise-grade security & compliance"
+      },
+      "title": "Key Advantages"
+    },
+    "desc": "Outperforms competitors in AI analysis accuracy, multi-cloud capabilities, cost-effectiveness, hybrid workload support, serverless architecture, and more. Trusted by millions of professional users globally, we excel in integrated analytics of structured and unstructured data, continuously fortifying data integrity and security throughout the entire lifecycle of your organization data.",
+    "function": {
+      "list": {
+        "title1": "One Data",
+        "title2": "AI-ready",
+        "title3": "Elastic Computing",
+        "title4": "High-Performance Engine",
+        "title5": "Adaptive Query Scaling",
+        "title6": "Workload Isolation",
+        "value1": "The SHARED-DATA architecture maintains a single global copy of data, ensuring a consistent source of truth. This approach guarantees high quality, simplifies management, and reduces costs.",
+        "value2": "A single platform for end-to-end data processing, featuring real-time updates, full indexing, vector search, ranking, and code generation/execution for analytics. It seamlessly integrates your data with LLMs, and accelerates AI innovation and business advancements.",
+        "value3": "DPS clusters can be deployed, resized, suspended, and resumed on demand, meeting different and changing compute resource needs.",
+        "value4": "The vectorized engine Vector DPS, supporting the SIMD instruction set, combined with a cost-based optimizer and high-throughput storage, offers unparalleled cost-effectiveness.",
+        "value5": "This feature automatically identifies large queries during execution and routes them to a shared compute resource pool, ensuring a per-query success rate of no less than 99.9%.",
+        "value6": "You can use DPS clusters deployed in different clouds and regions to handle various workloads, ensuring stability and preventing workload interference."
+      },
+      "title": "Product Features"
+    },
+    "scene": {
+      "list": {
+        "title1": "AI-ready Data",
+        "title2": "Surging Demands in Queries and Analytics",
+        "title3": "Reduce Storage Costs for Analytics Systems",
+        "title4": "Simplify Data Pipelines",
+        "title5": "Require High System Agility",
+        "title6": "Require Highly Stable Analytics Systems",
+        "value1": "With Relyt, your data is always AI-ready. Powered by an innovative AI insight engine and advanced vector storage and retrieval techniques, Relyt enables hybrid queries across diverse data types and formats, regardless of which cloud it's on—unlocking the potential for RAG, ML, GenAI, and more.",
+        "value2": "In many business scenarios, data processing workloads exhibit significant variability, characterized by frequent peaks and troughs. As a result, scaling compute resources dynamically is essential to handle unpredictable spikes in workload efficiently. Traditional data warehouse solutions often lack real-time elastic scaling capabilities, although some offer limited elasticity. This often leads to over-subscription of compute resources, sometimes reaching as high as 80%, thereby increasing the total cost of ownership (TCO) for organizations.",
+        "value3": "In traditional data processing scenarios, storage often becomes a major bottleneck for organizations, second only to computing. Different compute engines and systems may require multiple redundant data copies, increasing storage costs and complicating data management. This issue is particularly prominent in data-intensive industries such as gaming, SaaS, finance, e-commerce, and IoT.",
+        "value4": "Data processing is inherently complex, and the intricacy of data pipelines is often one of the most significant challenges. Typically, data must pass through multiple systems and ETL tools, which not only complicates workflows but also significantly increases operational difficulty and costs. This is especially problematic when trial and error is involved, as complex pipelines can make experimentation extremely costly.",
+        "value5": "As businesses expand, data accumulation continues, and many organizations find their existing data warehouse systems constrained by resource and performance bottlenecks. These systems struggle to meet the demands of data storage, computing, and analysis brought on by business growth. There is an urgent need for a system that can swiftly and agilely adjust to business changes, ensuring stability in data analysis. For instance, new SQL queries might impact existing operations, leading to a reluctance to use the system.",
+        "value6": "As your organization develops, the volume of data grows exponentially. SQL queries to address new business needs may need to scan large amounts of data, consuming significant compute resources of the data warehouse system. If system resources are improperly allocated or processing capacity is insufficient, this may affect online operations, leading to system instability. Allocating sufficient resources often results in high resource costs.",
+        "value21": "Relyt's DPS clusters support a wide range of types and specifications tailored to diverse customer needs. These clusters can be deployed, configured, resumed/suspended, and scaled automatically on demand, facilitating real-time expansion and reduction of compute resources. Additionally, DPS clusters feature Adaptive Query Scaling (AQS), which automatically identifies and directs large queries during execution to a shared computing resource pool. This ensures stable and uninterrupted business operations while managing costs effectively.",
+        "value31": "Relyt's vectorized engine, Vector DPS, supports a hybrid storage model, allowing Relyt to maintain a single global copy of data without redundant replicas. Additionally, Relyt's innovative features, such as sort key-based pruning, significantly reduce system I/O operations by up to 99%. Moreover, with its hybrid storage model, Relyt supports adaptive selection of compression algorithms and encoding methods, ensuring high I/O efficiency and minimizing storage costs.",
+        "value41": "Relyt AI Data Cloud supports various data formats, including structured and semi-structured data, and can handle diverse workloads such as analytical, transactional, and data science & AI tasks. With Relyt AI Data Cloud, core business needs such as data storage, querying, and analysis can be addressed in a one-stop solution without the need for ETL, minimizing processing complexity while ensuring real-time data availability.",
+        "value51": "Relyt offers exceptional real-time performance, elasticity, and reliability with its \"storage-compute separation + SHARED-DATA\" architecture. Relyt's DPS clusters support on-demand deployment and scaling, flexibly meeting the agile requirements of evolving business needs.",
+        "value61": "Furthermore, as business concurrency increases, data write and query concurrency will also rise accordingly. This will likewise consume substantial computational resources of the data warehouse system. If the system cannot effectively handle high concurrent requests, it may impact online operations, causing system instability. Therefore, the data warehouse system needs to possess high concurrency processing capabilities to maintain stable operation under high concurrency conditions.",
+        "value11": {
+          "title": "Key capabilities include:",
+          "des1": "Integration with data lakes (Iceberg, Delta Lake, Hudi, Parquet)",
+          "des2": "Hybrid search and analysis (Table/JSON/Vector/Text)",
+          "des3": "RAG, vector storage and retrieval",
+          "des4": "Knowledge indexing and knowledge graph"
+        }
+      },
+      "title": "Application Scenarios"
+    },
+    "title": "AI-ready Data Cloud",
+    "tools": {
+      "btn": {
+        "advantage": "Product Advantages",
+        "scene": "Application Scenarios",
+        "structure": "Product Architecture "
+      },
+      "subTitle": "Product Introduction",
+      "title": "Documentation and Tools"
+    }
+  },
+  "tips": {
+    "duplicate": {
+      "content": "You have already submitted the form. Please check your email.",
+      "title": "Duplicate Submission Reminder"
+    },
+    "error": {
+      "content": "Submission Failed, Please try again later."
+    },
+    "success": {
+      "content": "Thanks for your submission, and our team will reach out within one business day.",
+      "title": "Submission Successful",
+      "whitePaperContent": "Thank you for your interest in Relyt"
+    }
+  },
+  "shared": {
+    "firstScreen": {
+      "category": "Use Cases"
+    },
+    "background": {
+      "title": "Background"
+    },
+    "painPoints": {
+      "title": "Customer Pain Points"
+    },
+    "solution": {
+      "title": "Solution Overview"
+    },
+    "capabilities": {
+      "title": "Application Scenarios"
+    },
+    "benefits": {
+      "title": "Customer Benefits"
+    }
+  },
+  "useCases": {
+    "aigc": {
+      "title": "Generative AI",
+      "background": "This customer, a GenAI service provider, manages the daunting task of processing hundreds of billions of data records and millions of queries every day. Facing challenges such as data volume management, maintaining query speed, and ensuring accurate analytics, they require an AI RAG system capable of performing real-time analytics on massive datasets.",
+      "solution": "The Relyt GenAI solution transforms unstructured data, including text and images, into vectors using embedding models and securely stores these vectors in vector databases. When an application accesses the data, it first retrieves semantically related text from the vector database. This text, along with user queries, is sent to Large Language Models (LLMs) as context or prompts. The LLMs then process and return the answers to the applications. This method effectively resolves challenges related to data privacy and the 'hallucination' issues commonly faced with LLMs.",
+      "painPoints": {
+        "point1": {
+          "title": "High cost of storage and retrieval",
+          "des": "Managing hundreds of billions of vectors costs tens of millions per month, creating financial strain."
+        },
+        "point2": {
+          "title": "Performance bottlenecks",
+          "des": "The legacy system struggles to handle millions of daily queries with sub-100ms response times, affecting real-time performance."
+        },
+        "point3": {
+          "title": "Low search accuracy",
+          "des": "Poor search accuracy and lack of multi-path recall mechanisms lead to unreliable results, impacting business effectiveness."
+        },
+        "point4": {
+          "title": "Complex infrastructure dependencies",
+          "des": "Managing multiple retrieval components adds complexity, with each new tool requiring security approval and creating operational inefficiencies."
+        }
+      },
+      "capabilities": {
+        "capability1": {
+          "title": "AI-powered data analysis",
+          "desc": ""
+        },
+        "capability2": {
+          "title": "RAG",
+          "desc": "(Retrieval-Augmented Generation)"
+        }
+      },
+      "challenge": {
+        "cost": {
+          "title": "Cost-Efficiency at Scale",
+          "des": "With hundred billion-scale vector data, Our cloud-native capabilities provide a scalable solution, achieving a catalog price of hundreds of thousands per month."
+        },
+        "performance": {
+          "title": "High Performance",
+          "des": "The system must support millions of daily queries with an average response time (RT) of less than 100 milliseconds to meet real-time demands."
+        },
+        "quality": {
+          "title": "High Search Quality",
+          "des": "To provide accurate information retrieval and generation, we implement high-precision search results and multi-path recall mechanisms."
+        },
+        "infrastructure": {
+          "title": "Infrastructure and Operations",
+          "des": "The platform team must deploy and manage numerous retrieval components, including hosted embedding models, vector databases, data indexing pipelines, hosted re-ranking models, and observability tools."
+        },
+        "search": {
+          "title": "Search Quality Tuning",
+          "des": "Engineers and data scientists must spend time evaluating model and parameter configurations to adjust retrieval and ranking components based on specific business cases."
+        },
+        "security": {
+          "title": "Security and Governance",
+          "des": "Security teams must conduct extensive reviews to ensure that every component in the stack securely handles data and complies with governance policies."
+        }
+      },
+      "benefits": {
+        "des": {
+          "scale": {
+            "title": "Cost efficiency at scale",
+            "des": "Save millions monthly, reducing storage and retrieval costs for large-scale vector data.Save millions monthly, reducing storage and retrieval costs for large-scale vector "
+          },
+          "performance": {
+            "title": "High performance",
+            "des": "Support millions of queries daily with sub-100ms response times for real-time results."
+          },
+          "search": {
+            "title": "Accurate search",
+            "des": "Ensure precise results with high accuracy and multi-path recall mechanisms."
+          },
+          "management": {
+            "title": "Streamlined management",
+            "des": "We handle infrastructure, freeing the customer to focus on strategy, not complexity."
+          },
+          "optimization": {
+            "title": "Search optimization",
+            "des": "Easily adjust models and parameters for tailored search and ranking performance."
+          },
+          "compliant": {
+            "title": "Secure and compliant",
+            "des": "Safeguard data with robust security and governance, meeting all compliance standards."
+          }
+        },
+        "numbers": {
+          "chats": {
+            "title": "10M+",
+            "des": "chats"
+          },
+          "files": {
+            "title": "10M+",
+            "des": "files"
+          },
+          "updates": {
+            "title": "Real-time updates"
+          },
+          "index": {
+            "title": "Multimodal index"
+          },
+          "cto": {
+            "title": "90%",
+            "des": "reduction in TCO"
+          }
+        }
+      }
+    },
+    "intelligentManufacturing": {
+      "title": "Smart Manufacturing",
+      "background": "A manufacturing company, as it expands globally, faces challenges of rapidly growing data volumes and increasingly diverse analysis needs. To optimize production processes, inventory management, and market strategies, the company urgently needs a solution capable of processing vast amounts of data from factories, supply chains, and sales channels worldwide.",
+      "solution": "The Relyt solution seamlessly integrates with the enterprise's transaction, data, and BI platforms, delivering a unified, real-time data management and analysis system.",
+      "painPoints": {
+        "point1": {
+          "title": "Data integration challenges",
+          "des": "The company's data is dispersed across various systems and regions, leading to numerous data silos."
+        },
+        "point2": {
+          "title": "High real-time analytics demands",
+          "des": "Manufacturing processes require real-time monitoring and analysis to swiftly address production issues."
+        },
+        "point3": {
+          "title": "Cost control pressure",
+          "des": "Traditional data warehouse solutions are costly and often lack the adaptability needed to handle business fluctuations."
+        },
+        "point4": {
+          "title": "System agility needs",
+          "des": "There is a critical need for a flexible data analytics platform that can rapidly respond to market shifts and evolving business requirements."
+        }
+      },
+      "capabilities": {
+        "capability1": {
+          "title": "Real-time data management and analysis platform",
+          "desc": ""
+        }
+      },
+      "challenge": {
+        "data": {
+          "title": "Massive Data Scale",
+          "des": " The entertainment company deal with data volumes reaching the tens of billions, encompassing user behavior logs, advertising deployment data, and more."
+        },
+        "high": {
+          "title": "High Real-Time ",
+          "des": "Requirements: To maintain a competitive edge, the company requires real-time analysis of user behavior and advertising effectiveness."
+        },
+        "cost": {
+          "title": "Cost Control",
+          "des": "While ensuring service quality, it's essential to effectively manage the costs associated with data processing and storage."
+        },
+        "system": {
+          "title": "System Stability",
+          "des": "With the increasing volume of data, existing systems face challenges in stability and performance."
+        }
+      },
+      "benefits": {
+        "des": {
+          "view": {
+            "title": "Unified data view",
+            "des": "Consolidate scattered data for a comprehensive, single view."
+          },
+          "insights": {
+            "title": "Real-time insights",
+            "des": "Monitor and analyze processes in real-time to boost efficiency."
+          },
+          "efficiency": {
+            "title": "Cost efficiency",
+            "des": "Lower traditional data warehouse costs with scalable solutions."
+          },
+          "flexibility": {
+            "title": "Agility and flexibility",
+            "des": "Adapt quickly with a flexible platform that grows with your needs."
+          }
+        },
+        "numbers": {
+          "real": {
+            "title": "Real-time",
+            "des": "data management and analytics"
+          },
+          "tco": {
+            "title": "50%",
+            "des": "deduction in TCO"
+          },
+          "improvement": {
+            "title": "1.3x",
+            "des": "performance improvement"
+          },
+          "query": {
+            "title": "99.9%",
+            "des": "query success rate"
+          }
+        }
+      }
+    },
+    "internet": {
+      "title": "Internet",
+      "background": "An internet entertainment group is facing challenges in data processing and analysis. With the rapid growth of its business, the volume of data has increased sharply, creating an urgent need for an efficient and cost-effective data processing solution to support business decision-making and operational optimization.",
+      "solution": "The Relyt AI-ready Data Cloud delivers a scalable, cost-effective solution through its compute-storage separation architecture. As a cloud-agnostic platform, it boosts performance with vectorized query execution and algorithmic optimization. Its Adaptive Query Scaling (AQS) feature ensures high availability and efficient management of large-scale queries, offering a powerful solution for modern data workloads.",
+      "painPoints": {
+        "point1": {
+          "title": "Rapidly growing data volume",
+          "des": "The company handles tens of billions of records, including user behavior logs and advertising data, putting significant pressure on storage and processing capacity."
+        },
+        "point2": {
+          "title": "Stringent real-time analytics demands",
+          "des": "To stay ahead of the curve in a fast-evolving industry, the company requires timely predictive analytics on user behavior and ad performance."
+        },
+        "point3": {
+          "title": "Cost control urgency",
+          "des": "As data volume continues to expand, there is a pressing need to reduce data management and processing costs without compromising performance."
+        },
+        "point4": {
+          "title": "System stability issues",
+          "des": "With the increasing data volume and growing complexity of business queries, the current system is facing significant stability challenges and performance bottlenecks."
+        }
+      },
+      "capabilities": {
+        "capability1": {
+          "title": "Business operations analysis",
+          "desc": ""
+        }
+      },
+      "challenge": {
+        "data": {
+          "title": "Data Integration",
+          "des": "The enterprise's data is scattered across various systems and regions, lacking a unified data view."
+        },
+        "analysis": {
+          "title": "Real-time Analysis",
+          "des": "The manufacturing process requires real-time monitoring and analysis to quickly respond to production issues."
+        },
+        "cost": {
+          "title": "Cost Control",
+          "des": "Traditional data warehouse solutions are costly and struggle to adapt to business fluctuations."
+        },
+        "system": {
+          "title": "System Agility",
+          "des": "There is a need to rapidly adapt to market changes and business demands, placing a high premium on the flexibility of the data analytics platform."
+        }
+      },
+      "benefits": {
+        "des": {
+          "performance": {
+            "title": "Performance improvement",
+            "des": "Data processing is 1176% faster, especially in ad log processing."
+          },
+          "cost": {
+            "title": "Cost Savings",
+            "des": "Dynamic compute scaling doubles cost-performance in complex queries compared to traditional cloud solutions."
+          },
+          "system": {
+            "title": "System Stability",
+            "des": "Elastic computing ensures a 99.9% query success rate, even under high concurrency."
+          },
+          "enhanced": {
+            "title": "Enhanced Business Insights",
+            "des": "Real-time queries and efficient batch processing boost insights and performance in large data handling."
+          }
+        },
+        "numbers": {
+          "costs": {
+            "title": "90%",
+            "des": "deduction in ETL costs"
+          },
+          "optimization": {
+            "title": "10x",
+            "des": "query latency optimization"
+          },
+          "queries": {
+            "title": "Real-time queries"
+          },
+          "analytics": {
+            "title": "Multidimensional analytics"
+          }
+        }
+      }
+    },
+    "socialMedia": {
+      "title": "Social Media",
+      "background": "A major online media company manages vast data across scenarios like real-time public opinion monitoring, content verification, and multidimensional analysis. As data grows, they face significant challenges, including handling high concurrency during peak traffic periods, ensuring the accuracy of data and insights, and maintaining high performance. To overcome these hurdles, the company urgently requires a unified solution that can efficiently manage these complexities while providing the scalability and flexibility needed for future growth.",
+      "painPoints": {
+        "point1": {
+          "title": "High recall rate requirements",
+          "des": "The business relies on high recall rates to ensure accurate data analysis. A recall rate below 98% leads to inaccurate insights, affecting overall business precision."
+        },
+        "point2": {
+          "title": "Lack of real-time data access",
+          "des": "Immediate data retrieval upon ingestion is essential for real-time monitoring in public sentiment analysis. Without this capability, the business risks missing critical insights."
+        },
+        "point3": {
+          "title": "Limited scalability for high concurrent reads/writes",
+          "des": "The current system struggles to support the high concurrent demands of tens of thousands of QPS and 2000 TPS while maintaining a 99% recall rate, impacting performance during peak loads."
+        },
+        "point4": {
+          "title": "Inefficient data management",
+          "des": "The business primarily relies on the last 7 days of hot data for vector searches, but without proper data lifecycle management, handling and accessing this data becomes inefficient."
+        }
+      },
+      "capabilities": {
+        "capability1": {
+          "title": "Unified public opinion retrieval",
+          "desc": ""
+        },
+        "capability2": {
+          "title": "Real-time content verification",
+          "desc": ""
+        },
+        "capability3": {
+          "title": "Real-time multi-dimensional analysis",
+          "desc": ""
+        }
+      },
+      "solution": "The Relyt AI-ready Data Cloud revolutionizes data processing and analytics through cutting-edge vector storage and retrieval capabilities. This solution converts unstructured data into vectors using advanced embedding models. These vectors, along with structured data, are securely stored in specialized vector databases, facilitating real-time hybrid search and retrieval of both structured data and unstructured data.",
+      "challenge": {
+        "recall": {
+          "title": "High Recall Rates",
+          "des": "Low recall rates present two issues—first, data writes can become bloated, and second, query results for similar records may be missed, impacting the logical judgment of upstream business processes."
+        },
+        "concurrency": {
+          "title": "High Recall Rates",
+          "des": "Low recall rates present two issues—first, data writes can become bloated, and second, query results for similar records may be missed, impacting the logical judgment of upstream business processes."
+        },
+        "data": {
+          "title": "High Recall Rates",
+          "des": "Low recall rates present two issues—first, data writes can become bloated, and second, query results for similar records may be missed, impacting the logical judgment of upstream business processes."
+        },
+        "subDes": "In this scenario, Relyt AI-ready Data Cloud achieves a recall rate of 98%, with write and query performance two to three times greater than competitors. It also offers TTL (Time-To-Live) data management capabilities, earning the trust of our clients."
+      },
+      "integration": {
+        "data": "Data warehouse & data lake",
+        "GenAI": "GenAI application & innovation",
+        "smart": "Smart analytics & insights"
+      },
+      "benefits": {
+        "des": {
+          "rate": {
+            "title": "High recall rate",
+            "des": "ensuring comprehensive retrieval and accurate decision-making."
+          },
+          "concurrency": {
+            "title": "High concurrency",
+            "des": "with a peak write TPS of 2,000 and a peak QPS of 13,000."
+          },
+          "management": {
+            "title": "Auto data management",
+            "des": "with a default data retention period of 7 days."
+          }
+        },
+        "numbers": {
+          "scale": {
+            "title": "Hundred billion-scale",
+            "des": "vectors"
+          },
+          "queries": {
+            "title": "200",
+            "subTitle": "million",
+            "des": "queries per day"
+          },
+          "latency": {
+            "title": "10",
+            "subTitle": "ms",
+            "des": "average latency"
+          },
+          "rate": {
+            "title": "98%",
+            "des": "recall rate"
+          },
+          "qps": {
+            "title": "13000",
+            "des": "QPS"
+          },
+          "TPS": {
+            "title": "2,000",
+            "des": "TPS"
+          }
+        }
+      }
+    },
+    "subTitles": {
+      "background": "Background",
+      "benefits": "Customer Benefits",
+      "capabilities": "Application Scenarios",
+      "challenges": "Challenges",
+      "integrations": "Recommended Integrations",
+      "solution": "Solution Overview"
+    }
+  },
+  "customerStory": {
+    "hello": {
+      "title": "AI-driven Operations",
+      "category": "Customer Story",
+      "background": {
+        "company": "Hello",
+        "companyUrl": "https://www.hello-inc.com/",
+        "description": "is a popular bike-sharing service operating in multiple cities, providing users with the convenience of renting bicycles via a mobile app. To ensure smooth operations, Hello hires thousands of regional operations managers who are responsible for optimizing vehicle distribution and dispatch in tens of thousands of grids, driving growth in orders and market share, and increasing the monthly membership subscriptions. In addition, these managers oversee local vehicle orders and work to improve the efficiency of personnel, ensuring that the service runs seamlessly and meets the demands of users."
+      },
+      "painPoints": {
+        "point1": {
+          "title": "Data skill gap among regional managers",
+          "des": "Regional managers often lack the data skills needed for data-driven operations, hindering their ability to make informed decisions and drive performance improvements."
+        },
+        "point2": {
+          "title": "Fragmented data hinders use",
+          "des": "The overwhelming number of metrics spread across fragmented platforms, along with complex BI reports, makes data difficult to utilize effectively."
+        },
+        "point3": {
+          "title": "Insights don't drive action",
+          "des": "Insights don't always lead to actionable steps, and decisions often rely more on experience and intuition than on data."
+        },
+        "point4": {
+          "title": "Market share hard to expand",
+          "des": "Given the complexity of data and reliance on experience over insights, expanding market share becomes increasingly difficult."
+        }
+      },
+      "solution": {
+        "title": "Data Cloud Powerdrill's AI-driven operations solution addresses Hello's challenges with a comprehensive approach:",
+        "list": {
+          "item1": "Establishes an ETL pipeline to export regional dispatch data (daily, weekly, and monthly) into Powerdrill.",
+          "item2": "Integrates strategic factors, such as correlations with monthly membership subscriptions, to enhance data insights.",
+          "item3": "Supports the development of operations strategies through a structured process: gathering strategies, executing and analyzing, optimizing and adjusting, and promoting operations."
+        }
+      },
+      "benefits": {
+        "title": "Customer Benefits",
+        "list": {
+          "item1": {
+            "title": "Simplified decision-making",
+            "des": "Enable easy, personalized queries that allow for quicker and more informed decisions across teams."
+          },
+          "item2": {
+            "title": "Enhanced usage",
+            "des": "Amplify metrics with AI-driven data services, significantly boosting data usage and engagement by 100x."
+          },
+          "item3": {
+            "title": "Stable strategies",
+            "des": "Equip regional managers with over 20 proven operational strategies designed to drive consistent performance and success."
+          },
+          "item4": {
+            "title": "Efficient growth",
+            "des": "Balance team members efficiency with the steady and sustainable growth of Monthly Membership Cards for long-term success."
+          }
+        }
+      }
+    }
+  },
+  "aboutUs": {
+    "banner": {
+      "title": "Meet DataCloud"
+    },
+    "definition": {
+      "whoWeAre": "DataCloud Technology is an AI-ready Data cloud service provider and a global leader and practitioner in Serverless AI-ready Data Cloud solutions. Headquartered in Singapore with branches in the U.S., the company serves Fortune 500 technology clients and over 1 million individual users worldwide.",
+      "ourMission": {
+        "des": "With the exponential growth of data, the boundaries of enterprise data governance are expanding, leading to increasing challenges in data costs, privacy, and security. Concurrently, rapid advancements in technologies like generative AI are driving enterprises towards a new era of AI transformation and AI data business upgrades. In this context, based on typical enterprise data business scenarios and demand analysis, we believe there are two key requirements for enterprise-grade AI data infrastructure: First, it must be cost-effective and trustworthy for customers to adopt. Second, it must ensure optimal usage and maximize data value. The latter is more demanding, emphasizing AI-driven value creation and data collaboration to enable broader utilization of data value across the organization. AI-ready Data Cloud empowers organizations to:",
+        "empower1": "Drive Al transformation, unlocking Al use cases and amplifying productivity.",
+        "empower2": "Democratize Al, fostering business exploration and innovation."
+      }
+    },
+    "news": {
+      "title": "Our News",
+      "items": {
+        "item1": {
+          "date": "2022-10",
+          "content": "DataCloud Becomes Full Member of TPC Committee"
+        },
+        "item2": {
+          "date": "2024-03",
+          "content": "Excited to Announce Our ISO 9001, 14001, 20000, 27001, and 45001 Certifications"
+        },
+        "item3": {
+          "date": "2024-05",
+          "content": "Relyt Officially Joins AWS Marketplace"
+        },
+        "item4": {
+          "date": "2024-07",
+          "content": "Powerdrill AI Hits 1 Million Users: Celebrating a Major Milestone"
+        },
+        "item5": {
+          "date": "2024-09",
+          "content": "Powerdrill AI Ranks #1 spot on the QuALITY Benchmark"
+        }
+      }
+    },
+    "locations": {
+      "title": "Our Locations",
+      "contactUs": "Contact Us",
+      "address": "Address",
+      "headquarters": "Headquarters",
+      "cities": {
+        "beijing": {
+          "city": "Beijing",
+          "country": "China"
+        },
+        "hangzhou": {
+          "city": "Hangzhou",
+          "country": "China"
+        },
+        "singapore": {
+          "city": "Singapore",
+          "country": "Singapore"
+        },
+        "hongkong": {
+          "city": "Hong Kong",
+          "country": "China"
+        },
+        "shenzhen": {
+          "city": "Shenzhen",
+          "country": "China"
+        },
+        "virginia": {
+          "city": "Virginia",
+          "country": "United States"
+        }
+      },
+      "contactEmail": "contact@data.cloud",
+      "addressText": "71 Ayer Rajah Crescent, Singapore 139951"
+    }
+  },
+  "documentation": {
+    "title": "DataCloud Documentation",
+    "buttonText": "Documentation",
+    "cards": {
+      "relyt": {
+        "title": "Relyt",
+        "description": "Serverless Data Cloud for Data Warehouse, Data Lake, AI"
+      },
+      "powerdrill": {
+        "title": "Powerdrill",
+        "description": "AI Analytics Cloud for Serious Data Work"
+      }
+    }
+  },
+  "requestDemo": {
+    "submitBtn": "Submit and Schedule",
+    "submited": {
+      "title": "Submission Successful",
+      "des": "Thanks for your submission, and our team will reach out within one business day. Please check your email."
+    }
+  },
+  "statistics": {
+    "questionsAnswered": {
+      "number": "13M+",
+      "title": "Questions Answered",
+      "description": "Accelerating data-driven decisions with AI-powered insights"
+    },
+    "activeUsers": {
+      "number": "1.5M+",
+      "title": "Active Users",
+      "description": "Trusted by users and enterprises worldwide"
+    },
+    "filesProcessed": {
+      "number": "10M+",
+      "title": "Files Processed",
+      "description": "Transforming raw data into actionable intelligence at scale"
+    }
+  }
+}

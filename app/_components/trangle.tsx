@@ -1,4 +1,7 @@
-export default function Trangle() {
+interface TrangleProps {
+	bgProps?: React.SVGProps<SVGSVGElement>;
+}
+export default function Trangle({ bgProps }: TrangleProps) {
 	return (
 		<>
 			<svg
@@ -7,6 +10,7 @@ export default function Trangle() {
 				viewBox="0 0 710 499"
 				width="710"
 				xmlns="http://www.w3.org/2000/svg"
+				{...bgProps}
 			>
 				<g clipPath="url(#clip0_17637_226)">
 					<mask

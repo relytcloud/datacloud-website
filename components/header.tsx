@@ -119,7 +119,7 @@ export default function Header({ className = "" }: Props) {
 
 	return (
 		<div
-			className={`fixed top-0 right-0 left-0 z-50 bg-black text-base-500 transition-transform duration-300 md:bg-linear-to-b md:bg-transparent md:from-black/50 md:to-transparent ${isVisible ? "translate-y-0" : "-translate-y-full"} ${className}`}
+			className={`fixed top-0 right-0 left-0 z-50 text-base-500 transition-transform duration-300 md:bg-linear-to-b md:bg-transparent md:from-black/50 md:to-transparent ${isVisible ? "translate-y-0" : "-translate-y-full"} ${className}`}
 		>
 			<div
 				className={
@@ -493,7 +493,7 @@ export default function Header({ className = "" }: Props) {
 								<LocaleSwitcher className="justify-end" />
 							</div>
 							<Button
-								className="mx-3 mb-4 w-[calc(100%-1.5rem)] text-white"
+								className="mb-4 w-full text-white"
 								size="sm"
 								variant="outline"
 							>

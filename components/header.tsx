@@ -1,3 +1,6 @@
+/** biome-ignore-all lint/a11y/noNoninteractiveElementInteractions: false positive */
+/** biome-ignore-all lint/a11y/useKeyWithClickEvents: false positive */
+/** biome-ignore-all lint/a11y/noStaticElementInteractions: false positive */
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -102,16 +105,28 @@ export default function Header({ className = "" }: Props) {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
+	// Prevent body scroll when mobile menu is open
+	useEffect(() => {
+		if (showMenu) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "";
+		}
+		return () => {
+			document.body.style.overflow = "";
+		};
+	}, [showMenu]);
+
 	return (
 		<div
 			className={`fixed top-0 right-0 left-0 z-50 bg-black text-base-500 transition-transform duration-300 md:bg-linear-to-b md:bg-transparent md:from-black/50 md:to-transparent ${isVisible ? "translate-y-0" : "-translate-y-full"} ${className}`}
 		>
 			<div
-				className={`flex items-center justify-between py-4 ${
-					showMenu ? "small-header" : ""
-				} px-6 lg:bg-transparent xl:px-12`}
+				className={
+					"flex items-center justify-between px-4 py-3 sm:px-6 md:py-4 lg:bg-transparent xl:px-12"
+				}
 			>
-				<nav className="flex items-center justify-between gap-4">
+				<nav className="hidden items-center justify-between gap-4 lg:flex">
 					<Link
 						className="mr-8 text-center leading-[32px]"
 						href={getLocalizedHref("/")}
@@ -198,19 +213,34 @@ export default function Header({ className = "" }: Props) {
 						text={t("company")}
 					/>
 				</nav>
-				<nav className="flex items-center justify-between gap-4 lg:hidden">
-					{showMenu ? (
-						<CloseIcon
-							className="cursor-pointer text-contrast-secondary hover:text-white"
-							onClick={() => setShowMenu(false)}
+				{/* Mobile logo and menu button */}
+				<div className="z-99 flex w-full items-center justify-between lg:hidden">
+					<Link
+						className="text-center leading-[32px]"
+						href={getLocalizedHref("/")}
+					>
+						<Image
+							alt={"logo"}
+							className="inline-block h-5 w-auto object-contain sm:h-6"
+							height="24"
+							src="/assets/datacloud-logo.svg"
+							width="145"
 						/>
-					) : (
-						<MenuIcon
-							className="cursor-pointer text-contrast-secondary hover:text-white"
-							onClick={() => setShowMenu(true)}
-						/>
-					)}
-				</nav>
+					</Link>
+					<nav className="flex items-center justify-between gap-4">
+						{showMenu ? (
+							<CloseIcon
+								className="h-6 w-6 cursor-pointer text-contrast-secondary hover:text-white"
+								onClick={() => setShowMenu(false)}
+							/>
+						) : (
+							<MenuIcon
+								className="h-6 w-6 cursor-pointer text-contrast-secondary hover:text-white"
+								onClick={() => setShowMenu(true)}
+							/>
+						)}
+					</nav>
+				</div>
 				<nav className="hidden items-center justify-between gap-4 lg:flex">
 					<LocaleSwitcher />
 					<Button
@@ -228,177 +258,258 @@ export default function Header({ className = "" }: Props) {
 				</nav>
 			</div>
 			{showMenu ? (
-				<nav className="header-height fixed top-16 z-30 flex w-full flex-col justify-between gap-1 rounded-md border-text-tertiary bg-black px-3 py-2 text-left lg:hidden">
-					<nav>
-						<Disclosure as="div" className="px-3 py-1.5">
-							<DisclosureButton className="text-white">
-								{t("useCases")}
-							</DisclosureButton>
-							<DisclosurePanel className={"flex w-full flex-col px-0"}>
-								<Button
-									className="w-full rounded text-white hover:bg-contrast-hover"
-									size={"sm"}
-									variant="ghost"
-								>
-									<Link
-										className="w-full text-left"
-										href={getLocalizedHref("/use-case/social-media/")}
-										onClick={() => {
-											setShowMenu(false);
-										}}
+				<>
+					{/* Backdrop overlay */}
+					<div
+						className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm lg:hidden"
+						onClick={() => setShowMenu(false)}
+					/>
+					{/* Full screen menu */}
+					<nav className="fixed top-0 right-0 left-0 z-50 flex h-screen w-full flex-col justify-between gap-1 overflow-y-auto bg-black px-3 py-2 text-left lg:hidden">
+						<nav className="flex-1 pt-14 pb-4">
+							<Disclosure as="div" className="px-3 py-1.5">
+								<DisclosureButton className="text-white">
+									{t("products")}
+								</DisclosureButton>
+								<DisclosurePanel className={"flex w-full flex-col px-0"}>
+									<Button
+										className="w-full rounded text-white hover:bg-contrast-hover"
+										size={"sm"}
+										variant="ghost"
 									>
-										{t("useCaseItems.socialMedia")}
-									</Link>
-								</Button>
-								<Button
-									className="w-full rounded text-white hover:bg-contrast-hover"
-									size={"sm"}
-									variant="ghost"
-								>
-									<Link
-										className="w-full text-left"
-										href={getLocalizedHref("/use-case/generative-ai/")}
-										onClick={() => {
-											setShowMenu(false);
-										}}
+										<Link
+											className="flex w-full items-center gap-2 text-left"
+											href={getLocalizedHref("/#powerdrill")}
+											onClick={() => {
+												setShowMenu(false);
+											}}
+										>
+											<Image
+												alt={t("productItems.powerdrill")}
+												height={20}
+												src={getFullAssetUrl("/media/powerdrill.svg")}
+												width={20}
+											/>
+											{t("productItems.powerdrill")}
+										</Link>
+									</Button>
+									<Button
+										className="w-full rounded text-white hover:bg-contrast-hover"
+										size={"sm"}
+										variant="ghost"
 									>
-										{t("useCaseItems.generativeAI")}
-									</Link>
-								</Button>
-								<Button
-									className="w-full rounded text-white hover:bg-contrast-hover"
-									size={"sm"}
-									variant="ghost"
-								>
-									<Link
-										className="w-full text-left"
-										href={getLocalizedHref("/use-case/smart-manufacturing/")}
-										onClick={() => {
-											setShowMenu(false);
-										}}
+										<Link
+											className="flex w-full items-center gap-2 text-left"
+											href={getLocalizedHref("/#memory-lake")}
+											onClick={() => {
+												setShowMenu(false);
+											}}
+										>
+											<Image
+												alt={t("productItems.memorylake")}
+												height={20}
+												src={getFullAssetUrl("/media/memorylake.svg")}
+												width={20}
+											/>
+											{t("productItems.memorylake")}
+										</Link>
+									</Button>
+									<Button
+										className="w-full rounded text-white hover:bg-contrast-hover"
+										size={"sm"}
+										variant="ghost"
 									>
-										{t("useCaseItems.smartManufacturing")}
-									</Link>
-								</Button>
-								<Button
-									className="w-full rounded text-white hover:bg-contrast-hover"
-									size={"sm"}
-									variant="ghost"
-								>
-									<Link
-										className="w-full text-left"
-										href={getLocalizedHref("/use-case/internet/")}
-										onClick={() => {
-											setShowMenu(false);
-										}}
+										<Link
+											className="flex w-full items-center gap-2 text-left"
+											href={getLocalizedHref("/#relyt")}
+											onClick={() => {
+												setShowMenu(false);
+											}}
+										>
+											<Image
+												alt={t("productItems.relyt")}
+												height={20}
+												src={getFullAssetUrl("/media/relyt.svg")}
+												width={20}
+											/>
+											{t("productItems.relyt")}
+										</Link>
+									</Button>
+								</DisclosurePanel>
+							</Disclosure>
+							<Disclosure as="div" className="px-3 py-1.5">
+								<DisclosureButton className="text-white">
+									{t("useCases")}
+								</DisclosureButton>
+								<DisclosurePanel className={"flex w-full flex-col px-0"}>
+									<Button
+										className="w-full rounded text-white hover:bg-contrast-hover"
+										size={"sm"}
+										variant="ghost"
 									>
-										{t("useCaseItems.internet")}
-									</Link>
-								</Button>
-							</DisclosurePanel>
-						</Disclosure>
-						<Disclosure as="div" className="px-3 py-1.5">
-							<DisclosureButton className="text-white">
-								{t("customerStories")}
-							</DisclosureButton>
-							<DisclosurePanel className={"flex w-full flex-col px-0"}>
-								<Button
-									className="w-full rounded text-white hover:bg-contrast-hover"
-									size={"sm"}
-									variant="ghost"
-								>
-									<Link
-										className="w-full text-left"
-										href={getLocalizedHref("/customer-story/hello/")}
-										onClick={() => {
-											setShowMenu(false);
-										}}
+										<Link
+											className="w-full text-left"
+											href={getLocalizedHref("/use-case/social-media/")}
+											onClick={() => {
+												setShowMenu(false);
+											}}
+										>
+											{t("useCaseItems.socialMedia")}
+										</Link>
+									</Button>
+									<Button
+										className="w-full rounded text-white hover:bg-contrast-hover"
+										size={"sm"}
+										variant="ghost"
 									>
-										{t("customerStoryItems.hello")}
-									</Link>
-								</Button>
-							</DisclosurePanel>
-						</Disclosure>
-						<Disclosure as="div" className="px-3 py-1.5">
-							<DisclosureButton className="text-white">
-								{t("resources")}
-							</DisclosureButton>
-							<DisclosurePanel className={"flex w-full flex-col px-0"}>
-								<Button
-									className="w-full rounded text-white hover:bg-contrast-hover"
-									size={"sm"}
-									variant="ghost"
-								>
-									<Link
-										className="w-full text-left"
-										href={"https://data.cloud/blog"}
-										onClick={() => {
-											setShowMenu(false);
-										}}
-										target="_blank"
+										<Link
+											className="w-full text-left"
+											href={getLocalizedHref("/use-case/generative-ai/")}
+											onClick={() => {
+												setShowMenu(false);
+											}}
+										>
+											{t("useCaseItems.generativeAI")}
+										</Link>
+									</Button>
+									<Button
+										className="w-full rounded text-white hover:bg-contrast-hover"
+										size={"sm"}
+										variant="ghost"
 									>
-										{t("resourceItems.blog")}
-									</Link>
-								</Button>
-							</DisclosurePanel>
-							<DisclosurePanel className={"flex w-full flex-col px-0"}>
-								<Button
-									className="w-full rounded text-white hover:bg-contrast-hover"
-									size={"sm"}
-									variant="ghost"
-								>
-									<Link
-										className="w-full text-left"
-										href={getLocalizedHref("/documentation/")}
-										onClick={() => {
-											setShowMenu(false);
-										}}
+										<Link
+											className="w-full text-left"
+											href={getLocalizedHref("/use-case/smart-manufacturing/")}
+											onClick={() => {
+												setShowMenu(false);
+											}}
+										>
+											{t("useCaseItems.smartManufacturing")}
+										</Link>
+									</Button>
+									<Button
+										className="w-full rounded text-white hover:bg-contrast-hover"
+										size={"sm"}
+										variant="ghost"
 									>
-										{t("resourceItems.documentation")}
-									</Link>
-								</Button>
-							</DisclosurePanel>
-						</Disclosure>
-						<Disclosure as="div" className="px-3 py-1.5">
-							<DisclosureButton className="text-white">
-								{t("company")}
-							</DisclosureButton>
-							<DisclosurePanel className={"flex w-full flex-col px-0"}>
-								<Button
-									className="w-full rounded text-white hover:bg-contrast-hover"
+										<Link
+											className="w-full text-left"
+											href={getLocalizedHref("/use-case/internet/")}
+											onClick={() => {
+												setShowMenu(false);
+											}}
+										>
+											{t("useCaseItems.internet")}
+										</Link>
+									</Button>
+								</DisclosurePanel>
+							</Disclosure>
+							<Disclosure as="div" className="px-3 py-1.5">
+								<DisclosureButton className="text-white">
+									{t("customerStories")}
+								</DisclosureButton>
+								<DisclosurePanel className={"flex w-full flex-col px-0"}>
+									<Button
+										className="w-full rounded text-white hover:bg-contrast-hover"
+										size={"sm"}
+										variant="ghost"
+									>
+										<Link
+											className="w-full text-left"
+											href={getLocalizedHref("/customer-story/hello/")}
+											onClick={() => {
+												setShowMenu(false);
+											}}
+										>
+											{t("customerStoryItems.hello")}
+										</Link>
+									</Button>
+								</DisclosurePanel>
+							</Disclosure>
+							<Disclosure as="div" className="px-3 py-1.5">
+								<DisclosureButton className="text-white">
+									{t("resources")}
+								</DisclosureButton>
+								<DisclosurePanel className={"flex w-full flex-col px-0"}>
+									<Button
+										className="w-full rounded text-white hover:bg-contrast-hover"
+										size={"sm"}
+										variant="ghost"
+									>
+										<Link
+											className="w-full text-left"
+											href={"https://data.cloud/blog"}
+											onClick={() => {
+												setShowMenu(false);
+											}}
+											target="_blank"
+										>
+											{t("resourceItems.blog")}
+										</Link>
+									</Button>
+									<Button
+										className="w-full rounded text-white hover:bg-contrast-hover"
+										size={"sm"}
+										variant="ghost"
+									>
+										<Link
+											className="w-full text-left"
+											href={getLocalizedHref("/documentation/")}
+											onClick={() => {
+												setShowMenu(false);
+											}}
+										>
+											{t("resourceItems.documentation")}
+										</Link>
+									</Button>
+								</DisclosurePanel>
+							</Disclosure>
+							<Disclosure as="div" className="px-3 py-1.5">
+								<DisclosureButton className="text-white">
+									{t("company")}
+								</DisclosureButton>
+								<DisclosurePanel className={"flex w-full flex-col px-0"}>
+									<Button
+										className="w-full rounded text-white hover:bg-contrast-hover"
+										size={"sm"}
+										variant="ghost"
+									>
+										<Link
+											className="w-full text-left"
+											href={getLocalizedHref("/about-us/")}
+											onClick={() => {
+												setShowMenu(false);
+											}}
+										>
+											{t("companyItems.aboutUs")}
+										</Link>
+									</Button>
+								</DisclosurePanel>
+							</Disclosure>
+						</nav>
+						{/* Footer section with locale switcher and contact button */}
+						<nav className="border-text-tertiary border-t pt-4">
+							<div className="px-3 pb-4">
+								<LocaleSwitcher className="justify-end" />
+							</div>
+							<Button
+								className="mx-3 mb-4 w-[calc(100%-1.5rem)] text-white"
+								size="sm"
+								variant="outline"
+							>
+								<Link
+									className="w-full text-center"
+									href={getLocalizedHref("/contact-us/")}
 									onClick={() => {
 										setShowMenu(false);
 									}}
-									size={"sm"}
-									variant="ghost"
 								>
-									<Link
-										className="w-full text-left"
-										href={getLocalizedHref("/about-us/")}
-									>
-										{t("companyItems.aboutUs")}
-									</Link>
-								</Button>
-							</DisclosurePanel>
-						</Disclosure>
+									{t("contactUs")}
+								</Link>
+							</Button>
+						</nav>
 					</nav>
-					<nav className="flex flex-col gap-2">
-						<div className="px-3">
-							<LocaleSwitcher />
-						</div>
-						<Button
-							className="mt-2 w-full text-white"
-							onClick={() => {
-								location.assign(getLocalizedHref("/contact-us/"));
-								setShowMenu(false);
-							}}
-							size="sm"
-							variant="outline"
-						>
-							{t("contactUs")}
-						</Button>
-					</nav>
-				</nav>
+				</>
 			) : null}
 		</div>
 	);

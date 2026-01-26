@@ -36,7 +36,10 @@
   },
   "home": {
     "hero": {
-      "title": "MEMORY-CENTRIC DATA CLOUD",
+      "title": {
+        "line1": "MEMORY-CENTRIC",
+        "line2": "DATA CLOUD"
+      },
       "subtitle": "The Complete AI Data Stack — From Memory to Insights.",
       "description": "Enterprise-proven memory platform delivering integrated memory management, data LLM, and AI analytics. The complete infrastructure for intelligent AI systems."
     },

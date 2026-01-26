@@ -1,14 +1,11 @@
 "use client";
 
 // import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { cn, getFullAssetUrl } from "@/lib/utils";
 import Trangle from "./trangle";
 
 export default function Hero() {
-	const locale = useLocale();
-	const isZh = locale === "zh";
-
 	const videoSource = [
 		getFullAssetUrl("/media/main.webm"),
 		getFullAssetUrl("/media/main.mp4"),
@@ -42,11 +39,12 @@ export default function Hero() {
 					<div className="relative z-10 mt-[180px] flex max-w-[520px] flex-col items-center gap-2">
 						<h2
 							className={cn(
-								"mx-auto font-semibold text-3xl text-white md:text-4xl lg:text-5xl",
-								isZh ? "w-[70%]" : "w-[90%]",
+								"mx-auto text-center font-semibold text-3xl text-white md:text-4xl lg:text-5xl",
 							)}
 						>
-							{t("hero.title")}
+							{t("hero.title.line1")}
+							<br />
+							{t("hero.title.line2")}
 						</h2>
 						<p className="mx-auto mb-2.5 max-w-2xl text-sm text-white/80 md:mb-7 md:text-base lg:text-lg">
 							<span className="font-semibold text-white">

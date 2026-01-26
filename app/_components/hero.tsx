@@ -36,7 +36,7 @@ export default function Hero() {
 			<div className="section-content absolute z-10 mx-auto max-w-2xl px-4 text-center">
 				<div className="relative flex max-w-xl flex-col items-center gap-2">
 					<Trangle />
-					<div className="relative z-10 mt-[180px] flex max-w-[520px] flex-col items-center gap-2">
+					<div className="relative z-10 mt-[180px] flex max-w-[520px] flex-col items-center gap-2 backdrop-blur-[1px]">
 						<h2
 							className={cn(
 								"mx-auto text-center font-semibold text-3xl text-white md:text-4xl lg:text-5xl",

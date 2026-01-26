@@ -30,6 +30,7 @@ export default function Trangle() {
 								cx="356.5"
 								cy="344.5"
 								fill="white"
+								opacity="0.6"
 								rx="284.5"
 								ry="249.5"
 							/>

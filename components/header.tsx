@@ -8,6 +8,7 @@ import {
 	useRef,
 	useState,
 } from "react";
+import LocaleSwitcher from "@/components/locale-switcher";
 import { Button } from "@/components/ui/button";
 import {
 	Disclosure,
@@ -18,7 +19,6 @@ import { CloseIcon } from "@/components/ui/icons/close-icon";
 import { MenuIcon } from "@/components/ui/icons/menu-icon";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@/components/ui/menu";
 import { usePopoverHover } from "@/hooks/use-popup-over";
-import LocaleSwitcher from "@/components/locale-switcher";
 import { getFullAssetUrl } from "@/lib/utils";
 
 interface Props {
@@ -118,9 +118,8 @@ export default function Header({ className = "" }: Props) {
 					>
 						<Image
 							alt={"logo"}
-							className="inline-block"
+							className="inline-block object-contain"
 							height="24"
-							objectFit="contain"
 							src="/assets/datacloud-logo.svg"
 							width="145"
 						/>

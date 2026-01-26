@@ -1,37 +1,15 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
-import { cn, getFullAssetUrl } from "@/lib/utils";
+import { useTranslations } from "next-intl";
+import { getFullAssetUrl } from "@/lib/utils";
+import Hero from "../_components/hero";
 import Section from "../_components/section";
 import Statistics from "../_components/statistics";
 
 export default function Home() {
-	const locale = useLocale();
 	const t = useTranslations("home");
-	const isZh = locale === "zh";
-
-	console.log(locale);
 
 	const sections = [
-		{
-			id: "hero",
-			className: cn(
-				"[&>.section-content]:text-center",
-				"[&_.section-content_h2]:mx-auto",
-				isZh
-					? "[&_.section-content_h2]:w-[55%]"
-					: "[&_.section-content_h2]:w-[70%]",
-			),
-			title: t("hero.title"),
-			subtitle: t("hero.subtitle"),
-			description: t("hero.description"),
-			videoSource: [
-				getFullAssetUrl("/media/main.webm"),
-				getFullAssetUrl("/media/main.mp4"),
-			],
-			posterUrl: getFullAssetUrl("/media/main.webp"),
-			logo: "",
-		},
 		{
 			id: "powerdrill",
 			className:
@@ -84,6 +62,7 @@ export default function Home() {
 
 	return (
 		<main>
+			<Hero />
 			{sections.map((section) => (
 				<Section key={section.id} {...section} />
 			))}
